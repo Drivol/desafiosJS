@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
- 
+    <button id="reset">Reiniciar</button>
     <script>
-
+        
+        const reset = document.getElementById("reset");
         let anoEscolhido = Number(prompt("Verifique se o ano é bissexto: Digite um ano:"))
 
         if ((anoEscolhido % 400 === 0 && anoEscolhido === 0) || (anoEscolhido % 4 === 0)){
@@ -17,7 +18,9 @@
         }else{
             alert("O ano não é bissexto")
         }
-
+        reset.addEventListener("click", () => {
+            location.reload();
+        });
     </script>
     
     <a href="index.html"><button id="inicial">Página inicial</button></a>

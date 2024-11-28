@@ -4,17 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+
+            background-color: gray; 
+        }
+
+        nav{
+            background-color: rgb(190, 184, 184);
+            display: flex;
+            align-items: center; 
+            flex-direction: column; 
+            margin-bottom: 2rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        body #titulo{
+            font-size: 2rem;
+            color: white;
+        }
+
+        body .botao{
+            color: white;
+            background-color: black;
+            border-radius: 2rem;
+            height: 5em;
+            width: 20em;
+            margin: 0.5rem;
+            font-size: 1rem;
+        }
+
+        body .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
 </head>
 <body>
-    <p>JOGOS SIMPLES EM JAVASCRIPT</p>
-
-    <a href="exercicio1.html"><button id="adivinhacao">Jogo da adivinhação</button></a>
-    <a href="exercicio2.html"><button id="ano_bissexto">Verificador de Ano Bissexto</button></a>
-    <a href="exercicio3.html"><button id="media_escolar">Calculadora de Média Escolar</button></a>
-    <a href="exercicio4.html"><button id="gorjeta">Calculadora de Gorjeta</button></a>
-    <a href="exercicio5.html"><button id="data_hora">Saudação de Acordo com a Hora</button>
-    <a href="exercicio5.html"><button id="data_hora">Saudação de Acordo com a Hora</button></a>
-
+    <nav>
+        <h1 id="titulo"> JOGOS SIMPLES EM JAVASCRIPT</h1>
+    </nav>
+    
+    <div class="container">
+        <a href="exercicio1.html"><button class="botao">Jogo da adivinhação</button></a>
+        <a href="exercicio2.html"><button class="botao">Verificador de Ano Bissexto</button></a>
+        <a href="exercicio3.html"><button class="botao">Calculadora de Média Escolar</button></a>
+        <a href="exercicio4.html"><button class="botao">Calculadora de Gorjeta</button></a>
+        <a href="exercicio5.html"><button class="botao">Saudação de Acordo com a Hora</button>
+        <a href="exercicio5.html"><button class="botao">Saudação de Acordo com a Hora</button></a>
+    </div>
+    
+    <script>
+        
+    </script>
 
 </body>
 </html>

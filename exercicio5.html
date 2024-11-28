@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <button id="boasmaneiras">Clique para saber a saudação!</button>
+    <button id="reset">Reiniciar</button>
+    
 
     <script>
+      const reset = document.getElementById("reset");
+
       function boasmaneiras() {
         let agora = new Date();
         let agora2 = agora.getHours();
@@ -25,6 +30,9 @@
       document
         .getElementById("boasmaneiras")
         .addEventListener("click", boasmaneiras);
+
+        reset.addEventListener("click", () => {
+          location.reload();})
     </script>
 
     <a href="index.html"><button id="inicial">Página inicial</button></a>

@@ -6,7 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+
+    <button id="reset">Reiniciar</button>
+
     <script>
+        const reset = document.getElementById("reset");
+
       let valor = parseFloat(prompt("Qual o valor da conta?"));
       let satisfacao = prompt(
         "Qual seu nível de satisfação: Bom, ótimo ou excelente?"
@@ -48,6 +53,9 @@
             "Opção inválida. Por favor, escolha entre 'Bom', 'Ótimo' ou 'Excelente'."
           );
       }
+
+      reset.addEventListener("click", () => {
+        location.reload();})
     </script>
     <a href="index.html"><button id="inicial">Página inicial</button></a>
   </body>
