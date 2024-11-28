@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+
+  </head>
+
+  <body>
+    <button id="reset">Reiniciar</button>
+
+    <script>
+    const reset = document.getElementById("reset");
+      let numeroSecreto = Math.floor(Math.random() * 10 + 1);
+      let tentativa = Number(prompt("Adivinhe o número (entre 1 e 10):"));
+
+      if (tentativa == numeroSecreto) {
+        alert("Parabéns, você acertou!");
+      } else {
+        alert("Tente novamente!");
+      }
+
+     reset.addEventListener("click", () => {
+            location.reload();
+        });
+    </script>
+
+    <a href="index.html"><button id="inicial">Página inicial</button></a>
+
+  </body>
+</html>
