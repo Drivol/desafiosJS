@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Bem-vindo ao Exemplo de JavaScript</h1>
+    <input id="senha" type="password" placeholder="Digite a senha">
+    <button onclick="mostrarMensagem()">Vericar!</button>
+    <label id="resposta"></label>
+
+
+
+
+    <script>
+        function mostrarMensagem(){
+            let senhaVerdadeira = "Senai123";
+            let senhaDigitada = document.getElementById("senha").value;
+            let = label = document.getElementById("resposta");  
+                if (senhaVerdadeira == senhaDigitada) {
+               
+                label.innerText = "Senha valida";
+                } else {
+                    label.innerText = "Senha Invalida";
+                }}
+
+    </script>
+  </body>
+</html>
+
+

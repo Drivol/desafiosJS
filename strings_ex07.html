@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bem-vindo ao Exemplo de JavaScript</h1>
+    <p>Clique no botão e veja se a frase "Eu amo programar em JavaScript" tem ou não a plavara "JavaScript" .</p>
+    <button onclick="mostrarMensagem()">Mostrar Mensagem</button>
+
+    <script>
+        function mostrarMensagem(){
+            let texto = "Eu amo programar em JavaScript";
+                let encontrada = "Palavra encontrada";
+
+                if (texto.includes("JavaScript")){
+                    alert(encontrada)
+                } else {
+                    alert("Palavra não encontrada");
+                }}
+    </script>
+  </body>
+</html>
