@@ -30,12 +30,14 @@
     <h1>Bem-vindo ao Exemplo de JavaScript</h1>
     <input id="senha" type="password" placeholder="Digite a senha">
     <button onclick="mostrarMensagem()">Vericar!</button>
+    <a href="index.html"><button onclick="voltar()">Voltar!</button></a>
     <label id="resposta"></label>
 
 
 
 
     <script>
+
         function mostrarMensagem(){
             let senhaVerdadeira = "Senai123";
             let senhaDigitada = document.getElementById("senha").value;
