@@ -1,61 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
 
-    <h1>Selecione os ingredientes para sua receita:</h1>
-
-<form id="ingredientesSelecionados">
-    <input type="checkbox" id="arroz" name="ingredientes" value="arroz">
-    <label for="arroz">Arroz</label><br>
-
-    <input type="checkbox" id="feijao" name="ingredientes" value="feijao">
-    <label for="feijao">Feijão</label><br>
-
-    <input type="checkbox" id="batata" name="ingredientes" value="batata">
-    <label for="batata">Batata</label><br>
-
-    <input type="checkbox" id="macarrao" name="ingredientes" value="macarrao">
-    <label for="macarrao">Macarrão</label><br>
-
-    <input type="checkbox" id="carne" name="ingredientes" value="carne">
-    <label for="carne">Carne</label><br>
-
-    <button type="button" onclick="mostrarSelecionados()">Selecionar</button>
-</form>
-
-<p id="resultado"></p>
-
-<script>
-    function mostrarSelecionados() {
-        
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-        
-
-        const selecionados = [];
-        
-        
-        checkboxes.forEach(checkbox => {
-            selecionados.push(checkbox.value);
-        });
-
-        console.log("Ingredientes selecionados: " + selecionados.join(', '));
-
-        const resultado = document.getElementById('resultado');
-        if (selecionados.length > 0) {
-            resultado.textContent = "Você selecionou: " + selecionados.join(', ');
-        } else {
-            resultado.textContent = "Nenhum ingrediente selecionado.";
+    <style>
+        body{
+            background-color: rgb(179, 172, 172);
         }
-    }
-</script>
+        body .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-    
-</body>
+            color: white;
+        }
+        form{
+            margin: 2rem;
+        }
+        button{
+            margin-top: 2rem;
+            width: 8rem;
+            height: 2rem;
+        }
+        
+        
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Selecione os ingredientes para sua receita:</h1>
+
+      <form id="ingredientesSelecionados">
+        <input type="checkbox" id="arroz" name="ingredientes" value="arroz" />
+        <label for="arroz">Arroz</label><br />
+
+        <input type="checkbox" id="feijao" name="ingredientes" value="feijao" />
+        <label for="feijao">Feijão</label><br />
+
+        <input type="checkbox" id="batata" name="ingredientes" value="batata" />
+        <label for="batata">Batata</label><br />
+
+        <input
+          type="checkbox"
+          id="macarrao"
+          name="ingredientes"
+          value="macarrao"
+        />
+        <label for="macarrao">Macarrão</label><br />
+
+        <input type="checkbox" id="carne" name="ingredientes" value="carne" />
+        <label for="carne">Carne</label><br />
+
+        <button type="button" onclick="mostrarSelecionados()">
+          Selecionar
+        </button>
+      </form>
+
+      <p id="resultado"></p>
+
+      <script>
+        function mostrarSelecionados() {
+          const checkboxes = document.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+
+          const selecionados = [];
+
+          checkboxes.forEach((checkbox) => {
+            selecionados.push(checkbox.value);
+          });
+
+          console.log("Ingredientes selecionados: " + selecionados.join(", "));
+
+          const resultado = document.getElementById("resultado");
+          if (selecionados.length > 0) {
+            resultado.textContent =
+              "Você selecionou: " + selecionados.join(", ");
+          } else {
+            resultado.textContent = "Nenhum ingrediente selecionado.";
+          }
+        }
+      </script>
+    </div>
+  </body>
 </html>
 
 <!-- Arroz", "Feijão", "Batata", "Macarrão", "Carne -->
